@@ -1,0 +1,132 @@
+<!---A mail-order house sells five different products whose retail prices 
+are as follows: product 1, $2.98; product 2, $4.50; product 3, $9.98; 
+product 4, $4.49; and product 5, $6.87. Write a script that reads a 
+series of pairs of numbers as follows: 1. Product number 2. Quantity 
+sold for one day Your program should use a switch statement to 
+determine each product's retail price and should calculate and output 
+HTML that displays the total retail value of all the products sold last 
+week. Use a prompt dialog to obtain the product number and quantity 
+from the user. Use a sentinel-controlled loop to determine when the 
+program should stop looping and display the final results. If the user 
+inputs an invalid product number a proper alert window shall be 
+displayed.--->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table {
+            border: 1px solid #b3adad;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        table th {
+            border: 1px solid #b3adad;
+            padding: 5px;
+            background: #f1eaea;
+            color: #313030;
+        }
+
+        table td {
+            border: 1px solid #b3adad;
+            text-align: center;
+            padding: 5px;
+            background: #ededed;
+            color: #313030;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product#</th>
+                <th>Total Sales</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product-1</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product-2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product-3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Prodct-4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Product-5</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        var pronum = 0;
+        pronum = window.prompt("Enter product number or enter 6 to quit");
+        var i = 0;
+        var answer = 0;
+        while (pronum = !-1) {
+            pronum = parseInt(pronum);
+            switch (pronum) {
+                case 1:
+                    var prom = window.prompt("No. of Product-1 sold:");
+                    var pro = parseInt(prom);
+                    mrp = 2.98;
+                    var sum = mrp * pro;
+                    break;
+                case 2:
+                    var prom = window.prompt("No. of Product-2 sold:");
+                    pro = parseInt(prom);
+                    mrp = 4.50;
+                    var sum = mrp * pro;
+                    break;
+                case 3:
+                    var prom = window.prompt("No. of Product-3 sold:");
+                    pro = parseInt(prom);
+                    mrp = 9.98;
+                    var sum = mrp * pro;
+                    break;
+                case 4:
+                    var prom = window.prompt("No. of Product-4 sold:");
+                    pro = parseInt(prom);
+                    mrp = 4.49;
+                    var sum = mrp * pro;
+                    break;
+                case 5:
+                    var prom = window.prompt("No. of Product-5 sold:");
+                    pro = parseInt(prom);
+                    mrp = 6.87;
+                    var sum = mrp * pro;
+                    break;
+                default: window.alert("Youre messing up,try again or quit");
+                    break;
+            }
+            i++;
+            answer = answer + parseInt(sum);
+            if (i = !0) {
+                pronum = window.prompt("Enter product number or enter 6 to quit");
+            }
+            else {
+                window.alert("Try Again");
+            }
+        }
+        document.write("Total Cost=" + answer);
+    </script>
+</body>
+
+</html>
