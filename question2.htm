@@ -55,77 +55,66 @@ displayed.--->
         <tbody>
             <tr>
                 <td>Product-1</td>
-                <td></td>
+                <td id = 1></td>
             </tr>
             <tr>
                 <td>Product-2</td>
-                <td></td>
+                <td id = 2></td>
             </tr>
             <tr>
                 <td>Product-3</td>
-                <td></td>
+                <td id = 3></td>
             </tr>
             <tr>
                 <td>Prodct-4</td>
-                <td></td>
+                <td id = 4></td>
             </tr>
             <tr>
                 <td>Product-5</td>
-                <td></td>
+                <td id = 5></td>
             </tr>
         </tbody>
     </table>
     <script type="text/javascript">
-        var pronum = 0;
-        pronum = window.prompt("Enter product number or enter 6 to quit");
-        var i = 0;
-        var answer = 0;
-        while (pronum = !-1) {
+        var i = 5;   // loop will run for 5 times as we have 5 products only according to question.
+        while (i--) {
+            var sum = 0;
+            var pronum = 0;
+            var quantity = 0;
+            pronum = window.prompt("Enter product number");
             pronum = parseInt(pronum);
+            quantity = window.prompt("Enter the quantity sold in one day");
+            quantity = parseInt(quantity);
             switch (pronum) {
                 case 1:
-                    var prom = window.prompt("No. of Product-1 sold:");
-                    var pro = parseInt(prom);
-                    mrp = 2.98;
-                    var sum = mrp * pro;
+                    var mrp = 2.98;
+                    sum = mrp * quantity * 7;
                     break;
                 case 2:
-                    var prom = window.prompt("No. of Product-2 sold:");
-                    pro = parseInt(prom);
-                    mrp = 4.50;
-                    var sum = mrp * pro;
+                    var mrp = 4.50;
+                    sum = mrp * quantity * 7;
                     break;
                 case 3:
-                    var prom = window.prompt("No. of Product-3 sold:");
-                    pro = parseInt(prom);
-                    mrp = 9.98;
-                    var sum = mrp * pro;
+                    var mrp = 9.98;
+                    sum = mrp * quantity * 7;
                     break;
                 case 4:
-                    var prom = window.prompt("No. of Product-4 sold:");
-                    pro = parseInt(prom);
-                    mrp = 4.49;
-                    var sum = mrp * pro;
+                    var mrp = 4.49;
+                    sum = mrp * quantity * 7;
                     break;
                 case 5:
-                    var prom = window.prompt("No. of Product-5 sold:");
-                    pro = parseInt(prom);
-                    mrp = 6.87;
-                    var sum = mrp * pro;
+                    var mrp = 6.87;
+                    sum = mrp * quantity * 7;
                     break;
-                default: window.alert("Youre messing up,try again or quit");
-                    break;
+                default: 
+                    window.alert("Please enter a valid product number");
+                    i++;     // if the given input is wrong we increment the counter by one so that user can enter the value for this product again.
             }
-            i++;
-            answer = answer + parseInt(sum);
-            if (i = !0) {
-                pronum = window.prompt("Enter product number or enter 6 to quit");
-            }
-            else {
-                window.alert("Try Again");
+            if(pronum <= 5){
+                document.getElementById(pronum).innerHTML = sum;
             }
         }
-        document.write("Total Cost=" + answer);
+        
     </script>
 </body>
 
