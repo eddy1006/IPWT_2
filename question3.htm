@@ -1,0 +1,47 @@
+<!--- Create a web page with an image on it, a paragraph on it, and a 
+button. Now create a script (in your head section) that contains an 
+array of pictures. It should also contain button and function (Next). It 
+displays the picture in the array at that variable number. So it will 
+loop through the pictures in order, and when it gets to the end of the 
+array, it should loop back to the beginning. 
+Now add another button and another function (Add). This function 
+should allow you to add pictures to your array. The second button on 
+your web page should call this second function. 
+Make sure that if you add pictures to your array, first function (Next) 
+will work regardless of how many pictures you add.-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Online Image Viewer Pro</h1>
+                <img src="" id="image1">
+                <button type="button" id="Add" onclick="Add()">ADD</button>
+                <button type="button" id="Next" onclick="Next()">NEXT</button>
+    <script>
+        var display_photo = document.getElementById("image1");
+        var photos = ['https://staticg.sportskeeda.com/editor/2022/02/ae4d7-16442648332372-1920.jpg', 'https://c.ndtvimg.com/2021-09/3a76mb38_cristiano-ronaldo-afp_625x300_11_September_21.jpg', 'https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(webp):focal(1340x466:1342x464)/origin-imgresizer.eurosport.com/2021/05/08/3128245-64120628-2560-1440.jpg'];
+        var i = 0;
+        var j = 0;
+        adder = document.getElementById('image1');
+        function Next() {
+            display_photo.setAttribute("src", photos[i]);
+            i = (i + 1) % photos.length;
+        }
+        function Add() {
+            var url = window.prompt("Enter the url of your image","https://");
+            photos.push(url);
+        }
+    </script>
+</body>
+
+</html
