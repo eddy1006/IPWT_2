@@ -24,9 +24,11 @@ will work regardless of how many pictures you add.-->
 
 <body>
     <h1>Online Image Viewer Pro</h1>
-                <img src="" id="image1">
-                <button type="button" id="Add" onclick="Add()">ADD</button>
-                <button type="button" id="Next" onclick="Next()">NEXT</button>
+    <center><img src="" id="image1" height="500" width="700">
+    </br>
+        <button type="button" id="Add" onclick="Add()">ADD</button>
+        <button type="button" id="Next" onclick="Next()">NEXT</button>
+    </center>
     <script>
         var display_photo = document.getElementById("image1");
         var photos = ['https://staticg.sportskeeda.com/editor/2022/02/ae4d7-16442648332372-1920.jpg', 'https://c.ndtvimg.com/2021-09/3a76mb38_cristiano-ronaldo-afp_625x300_11_September_21.jpg', 'https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(webp):focal(1340x466:1342x464)/origin-imgresizer.eurosport.com/2021/05/08/3128245-64120628-2560-1440.jpg'];
@@ -38,8 +40,10 @@ will work regardless of how many pictures you add.-->
             i = (i + 1) % photos.length;
         }
         function Add() {
-            var url = window.prompt("Enter the url of your image","https://");
-            photos.push(url);
+            var url = window.prompt("Enter the url of your image");
+            if(url){
+                photos.push(url);
+            }
         }
     </script>
 </body>
