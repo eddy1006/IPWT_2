@@ -14,9 +14,11 @@ body{
 .sub-heading{
     text-align: center;
 }
+
 .newspaper hr{
     width: 6rem;
 }
+
 
 .weather{
     margin: 10px;
@@ -27,6 +29,10 @@ body{
     border: 1px solid black;
 }
 
+.fontitalic{
+    font-style: italic;
+}
+
 .lines{
     margin-top: 0;
 }
@@ -35,6 +41,7 @@ body{
     display: flex;
     flex-direction: row-reverse;
     margin: 10px;
+    padding-right: 300px;
 }
 
 .main{
@@ -62,7 +69,7 @@ body{
 }
 
 
-.topic1{
+.news1{
     width: 220px;
     text-align: center;
     font-size: 2rem;
@@ -75,7 +82,7 @@ body{
     font-size: 1.5rem;
 }
 
-.topic2{
+.news2{
     width: 170px;
     text-align: center;
     font-size: 2rem;
@@ -83,11 +90,11 @@ body{
 
 }
 
-.topic3{
+.news3{
     width: px;
     text-align: center;
     font-size: 2rem;
-    font-style: bold;
+    font-weight:bold;
 
 }
 
@@ -103,8 +110,8 @@ body{
 }
 
 
-.topic4{
+.news4{
     text-align: center;
     font-size: 2.5rem;
-    font-style: bold;
+    font-style: italic;
 }
