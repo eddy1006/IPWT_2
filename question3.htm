@@ -23,9 +23,16 @@ will work regardless of how many pictures you add.-->
 </head>
 
 <body>
-    <h1>Online Image Viewer Pro</h1>
+    <h1>
+        <center>Greatest Fotball players of all time</center>
+    </h1>
+    <center>
+        <p>Hello viewer, this is a list of the greates football players to ever exist.Feel free to go through them using
+            the <b>NEXT</b> button
+            and if you want to add more players then feel free to do so by using the <b>ADD</b> button </p>
+    </center>
     <center><img src="" id="image1" height="500" width="700">
-    </br>
+        </br>
         <button type="button" id="Add" onclick="Add()">ADD</button>
         <button type="button" id="Next" onclick="Next()">NEXT</button>
     </center>
@@ -41,7 +48,7 @@ will work regardless of how many pictures you add.-->
         }
         function Add() {
             var url = window.prompt("Enter the url of your image");
-            if(url){
+            if (url) {
                 photos.push(url);
             }
         }
